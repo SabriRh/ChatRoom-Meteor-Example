@@ -1,0 +1,47 @@
+<head>
+  <title>digitTest</title>
+</head>
+
+
+<body>
+
+{{> loginButtons}}
+
+  <h1>Test Digit-u Meteor Js</h1>
+<div class='discussion'>
+	{{> test}}
+</div>
+
+
+  
+</body>
+
+
+
+<template name="test">
+	<ul>
+		{{#each messages}}
+		{{>message}}
+		{{/each}}
+	</ul>
+
+  <textarea rows="4" cols="50"></textarea>
+<button class="submit">Submit Message</button>
+<button class="shot">Take a pic</button>
+</template>
+
+
+
+<template name="message">
+  <div>
+   	<span>
+  	{{date}} : {{user}}
+  </span>
+  	<div class='messageContent'>
+  		{{message}}
+  	</div>
+    <div class="Photo">
+      <img src="{{photo}}">
+    </div>
+  </div>
+</template>
